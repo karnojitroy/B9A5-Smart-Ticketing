@@ -17,9 +17,44 @@
 
 <body>
     <!-- header -->
-    <header>
-        <nav>
+    <header class="mx-auto px-20 container">
+        <nav class="mt-10 font-raleway">
+            <div class="bg-base-100 navbar">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="lg:hidden btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="z-[1] bg-base-100 shadow mt-3 p-2 rounded-box w-52 font-medium text-lg dropdown-content menu menu-sm">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
 
+                    <a class="font-extrabold text-4xl" href="/">P-Ticket</a>
+                </div>
+                <div class="lg:flex hidden navbar-center">
+                    <ul class="px-1 font-medium text-lg menu menu-horizontal">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="gap-2 border-[#1DD100] bg-[#1DD1001A] hover:bg-[#1DD100] font-bold text-[#1DD100] text-xl hover:text-white btn">
+                        <i class="fa-solid fa-van-shuttle"></i>
+                        Button
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
 
