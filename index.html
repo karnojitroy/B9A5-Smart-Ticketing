@@ -17,7 +17,7 @@
 
 <body>
     <!-- header -->
-    <header class="mx-auto px-32 container">
+    <header id="home" class="mx-auto px-32 container">
         <!-- navbar -->
         <nav class="mt-10 font-raleway">
             <div class="bg-base-100 navbar">
@@ -39,7 +39,7 @@
                         </ul>
                     </div>
 
-                    <a class="font-extrabold text-4xl" href="/">P-Ticket</a>
+                    <a class="font-extrabold text-4xl" href="#home">P-Ticket</a>
                 </div>
                 <div class="lg:flex hidden navbar-center">
                     <ul class="px-1 font-medium text-lg menu menu-horizontal">
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a
+                    <a href="#book-ticket"
                         class="gap-2 border-[#1DD100] bg-[#1DD1001A] hover:bg-[#1DD100] font-bold text-[#1DD100] text-xl hover:text-white btn">
                         <i class="fa-solid fa-van-shuttle"></i>
                         Bus
@@ -151,7 +151,8 @@
             </div>
         </section>
         <!-- Booking section -->
-        <section class="bg-[#F7F8F8] mt-32 py-28 border-t border-t-[#1DD100] rounded-tl-[88px] rounded-tr-[88px]">
+        <section id="book-ticket"
+            class="bg-[#F7F8F8] mt-32 py-28 border-t border-t-[#1DD100] rounded-tl-[88px] rounded-tr-[88px]">
             <div class="mx-auto px-32 container">
                 <!-- P.H Paribahan  short details -->
                 <div class="flex flex-col justify-center items-center w-full">
@@ -183,7 +184,7 @@
                                 <div>
                                     <button class="bg-[#1DD10026] font-inter font-medium text-[#1DD100] text-lg btn">
                                         <img src="images/seat-green.png" alt="">
-                                        <span>40</span>
+                                        <span id="left-seats">0</span>
                                         <span>Seats left</span>
                                     </button>
                                 </div>
@@ -249,101 +250,101 @@
                                 </button>
                             </div>
                             <!-- Seat plan -->
-                            <div class="flex gap-16 text-lg">
+                            <div id="bus-seat-plan" class="flex gap-16 text-lg">
                                 <!-- left side seats -->
                                 <div class="flex-1 seat">
                                     <div class="flex gap-6 mt-6">
                                         <p>A</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">A1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">A2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="A1">A1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="A2">A2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>B</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">B1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">B2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="B1">B1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="B2">B2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>C</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">C1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">C2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="C1">C1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="C2">C2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>D</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">D1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">D2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="D1">D1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="D2">D2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>E</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">E1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">E2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="E1">E1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="E2">E2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>F</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">F1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">F2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="F1">F1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="F2">F2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>G</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">G1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">G2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="G1">G1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="G2">G2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>H</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">H1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">H2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="H1">H1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="H2">H2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>I</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">I1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">I2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="I1">I1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="I2">I2</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
                                         <p>A</p>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">J1</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">J2</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="J1">J1</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="J2">J2</button>
                                     </div>
                                 </div>
                                 <!-- right side seats -->
                                 <div class="flex-1 seat">
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">A3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">A4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="A3">A3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="A4">A4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">B3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">B4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="B3">B3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="B4">B4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">C3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">C4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="C3">C3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="C4">C4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">D3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">D4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="D3">D3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="D4">D4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">E3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">E4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="E3">E3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="E4">E4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">F3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">F4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="F3">F3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="F4">F4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">G3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">G4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="G3">G3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="G4">G4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">H3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">H4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="H3">H3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="H4">H4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">I3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">I4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="I3">I3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="I4">I4</button>
                                     </div>
                                     <div class="flex gap-6 mt-6">
-                                        <button class="flex-1 bg-[#F7F8F8] btn">J3</button>
-                                        <button class="flex-1 bg-[#F7F8F8] btn">J4</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="J3">J3</button>
+                                        <button class="flex-1 bg-[#F7F8F8] btn btn-seat" id="J4">J4</button>
                                     </div>
                                 </div>
                             </div>
@@ -358,23 +359,19 @@
                                 <ul class="flex justify-between font-medium text-[#030712] text-base">
                                     <li class="flex flex-1 items-center gap-2">
                                         <p>Seat</p>
-                                        <p class="bg-[#1DD100] px-2 rounded-md text-white text-xs">0</p>
+                                        <p id="total-selected-seat"
+                                            class="bg-[#1DD100] px-2 rounded-md text-white text-xs">0</p>
                                     </li>
                                     <li class="flex-1">class</li>
                                     <li class="text-right flex-1">Price</li>
                                 </ul>
                                 <img src="images/Line-3.svg" alt="" class="py-4">
-                                <div class="space-y-4">
-                                    <ul class="flex justify-between font-normal text-[#03071299] text-base">
+                                <div id="seat-booking-list-container" class="space-y-4">
+                                    <!-- <ul class="flex justify-between font-normal text-[#03071299] text-base">
                                         <li class="flex-1">C2</li>
                                         <li class="flex-1">Economoy</li>
                                         <li class="text-right flex-1">0</li>
-                                    </ul>
-                                    <ul class="flex justify-between font-normal text-[#03071299] text-base">
-                                        <li class="flex-1">C2</li>
-                                        <li class="flex-1">Economoy</li>
-                                        <li class="text-right flex-1">0</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <img src="images/Line-4.svg" class="py-4" alt="">
                                 <div class="flex justify-between font-medium text-[#030712] text-base">
@@ -459,7 +456,8 @@
             </div>
         </div>
     </footer>
-
+    <!-- JavaScript -->
+    <script src="JS/utility.js"></script>
     <script src="JS/index.js"></script>
 </body>
 
