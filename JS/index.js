@@ -38,6 +38,8 @@ for (const btn of allButton) {
         }
 
     });
+}
+
 // set info in booking / checkout section
 function setBookingList(seat) {
 
@@ -62,6 +64,7 @@ function setBookingList(seat) {
     ul.appendChild(li3);
     elementContainer.appendChild(ul);
 }
+
 // remove item from booking/ checkout section after clicking seat button 
 function removeListFromBooking(selectedSeat) {
     const selectedItems = document.getElementsByClassName(selectedSeat);
