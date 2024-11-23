@@ -1,3 +1,10 @@
+// get element byb id
+function getAnyElementById(id){
+    const element = document.getElementById(id);
+    // return element;
+    return element
+}
+
 // set Green background when select a seat
 function setBackgroundById(elementId){
     const element = document.getElementById(elementId);

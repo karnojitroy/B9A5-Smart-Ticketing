@@ -376,44 +376,62 @@
                                 <img src="images/Line-4.svg" class="py-4" alt="">
                                 <div class="flex justify-between font-medium text-[#030712] text-base">
                                     <p>Total Price</p>
-                                    <p>BDT <span>0</span></p>
+                                    <p>BDT <span id="total-price">0</span></p>
+                                </div>
+                                <!-- display total discount -->
+                                <div id="discount-element" class="hidden">
+                                    <div class="flex justify-between font-normal text-red-600 text-xs">
+                                        <p>Total Discount</p>
+                                        <p>-<span id="discount-amount">0</span></p>
+                                    </div>
+                                </div>
+                                <div id="invalid-coupon" class="hidden">
+                                    <div class="font-normal text-red-600 text-xs">
+                                        <p>Sorry! Invalid Coupon.</p>
+                                    </div>
                                 </div>
                                 <!-- Submit Coupon -->
-                                <div class="relative flex items-center my-4">
-                                    <input type="text" placeholder="Have any coupon?" class="p-5 rounded-xl w-full">
-                                    <button type=""
-                                        class="right-0 absolute bg-[#1DD100] ml-0 px-4 py-3 rounded-lg font-semibold text-base text-white">
+                                <div id="coupon-input-container" class="relative flex items-center my-4">
+                                    <input id="coupon-input" type="text" placeholder="Have any coupon?"
+                                        class="p-4 rounded-xl w-full">
+                                    <button onclick="applyCoupon('clicked')" id="btn-apply-coupon"
+                                        class="right-0 absolute bg-[#1DD100] hover:bg-green-600 ml-0 px-4 py-3 rounded-lg font-semibold text-base text-white btn"
+                                        disabled>
                                         Apply
                                     </button>
                                 </div>
                                 <!-- Grand Total -->
                                 <div class="flex justify-between mt-4 font-medium text-[#030712] text-base">
                                     <p>Grand Total</p>
-                                    <p>BDT <span>0</span></p>
+                                    <p>BDT <span id="grand-total">0</span></p>
                                 </div>
                             </div>
                             <!-- Passenger Info -->
-                            <div class="mt-6">
-                                <form class="space-y-6 font-inter font-normal text-[#030712] text-base">
+                            <div class="mt-5">
+                                <form id="booking-form"
+                                    class="space-y-5 font-inter font-normal text-[#030712] text-base">
                                     <div>
                                         <label for="fname">Passenger Name<span class="text-red-600">*</span></label><br>
                                         <input type="text" id="fname" name="fname" placeholder="Enter your name"
-                                            class="border-[#0307121A] mt-4 p-5 border rounded-xl w-full"><br>
+                                            class="border-[#0307121A] mt-3 p-3 border rounded-xl w-full" required><br>
                                     </div>
 
                                     <div>
                                         <label for="phone">Phone Number<span class="text-red-600">*</span></label> <br>
                                         <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
-                                            class="border-[#0307121A] mt-4 p-5 border rounded-xl w-full"><br>
+                                            class="border-[#0307121A] mt-3 p-3 border rounded-xl w-full" required><br>
                                     </div>
 
                                     <div>
                                         <label for="email">Email ID</label><br>
                                         <input type="email" id="email" name="email" placeholder="Enter your email"
-                                            class="border-[#0307121A] mt-4 p-5 border rounded-xl w-full">
+                                            class="border-[#0307121A] mt-3 p-3 border rounded-xl w-full">
                                     </div>
-                                    <button
-                                        class="bg-[#1DD100] rounded-l-xl w-full font-extrabold font-raleway text-white text-xl btn">Next</button>
+                                    <button id="next-btn"
+                                        class="bg-[#1DD100] hover:bg-green-600 rounded-l-xl w-full font-extrabold font-raleway text-white text-xl btn"
+                                        disabled>
+                                        Next
+                                    </button>
                                     <!-- Term and conditions -->
                                     <div class="flex justify-around mt-6 font-normal text-[#03071299] text-base">
                                         <a href="">Terms and Conditions</a>
@@ -422,6 +440,34 @@
                                 </form>
                             </div>
                         </div>
+
+                    </div>
+                    <!-- Success modal -->
+                    <div>
+                        <!-- <button class="btn" onclick="success_modal.showModal()">open modal</button> -->
+                        <dialog id="success_modal" class="modal">
+                            <div
+                                class="flex flex-col justify-center items-center p-14 w-9/12 max-w-3xl text-center modal-box">
+                                <img src="images/success.svg" alt="">
+                                <h4 class="my-9 font-bold text-[#27AE60] text-2xl">SUCCESS</h4>
+                                <p class="py-2 font-medium text-[#4A4A4A] text-xl">
+                                    Thank you for Booking Our Bus Seats. <br>
+                                    We are working hard to find the best service and deals for you.
+                                </p>
+                                <p class="py-4 font-light text-[#4A4A4A] text-xl">
+                                    Shortly you will find a confirmation in your email.
+                                </p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button, it will close the modal -->
+                                        <button
+                                            class="bg-[#27AE60] hover:bg-green-800 px-24 rounded-full font-semibold text-2xl text-white btn">
+                                            Continue
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
         </section>
@@ -458,7 +504,8 @@
     </footer>
     <!-- JavaScript -->
     <script src="JS/utility.js"></script>
-    <script src="JS/index.js"></script>
+    <script src="JS/app.js"></script>
+    <!-- <script src="JS/index.js"></script> -->
 </body>
 
 </html>
